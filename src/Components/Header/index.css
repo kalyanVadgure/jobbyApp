@@ -1,0 +1,81 @@
+.header_container {
+  width: 100%;
+  background-color: #272727;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mobile_nav_bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+}
+
+@media screen and (min-width: 768px) {
+  .mobile_nav_bar {
+    display: none;
+  }
+}
+
+.nav_mobile_items_container {
+  display: flex;
+  list-style-type: none;
+}
+
+.nav_logo_jobby {
+  width: 100px;
+}
+
+.nav_item {
+  margin: 8px;
+  box-sizing: border-box;
+}
+
+.mobile_logout_button {
+  background-color: transparent;
+  border: 0px;
+  outline: none;
+}
+
+/* desktop Header */
+
+.desktop_nav_bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+}
+
+@media screen and (max-width: 767px) {
+  .desktop_nav_bar {
+    display: none;
+  }
+}
+
+.nav_desktop_items {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+
+.nav_desktop_item {
+  margin: 8px;
+}
+
+.desktop_nav_link {
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  font-weight: bold;
+}
+
+.desktop_nav_logout_button {
+  background-color: #6366f1;
+  border: 0px;
+  outline: none;
+  padding: 10px 18px 10px 18px;
+  color: white;
+  border-radius: 8px;
+}

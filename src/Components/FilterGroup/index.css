@@ -1,0 +1,16 @@
+.employment_type_container {
+  list-style: none;
+  color: white;
+}
+
+.salary_range_container {
+  list-style: none;
+  color: white;
+}
+
+.filters_heading {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'Roboto';
+}
