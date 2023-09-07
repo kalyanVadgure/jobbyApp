@@ -42,10 +42,19 @@ class Jobs extends Component {
 
     const apiUrl = 'https://apis.ccbp.in/jobs'
     const response = await fetch(apiUrl, options)
+
+    // In console response status is showing 401. Here data is failed fetch
+    // How can i solve this error ?
+    // Start the app and check this error in console
+
+    console.log(`jobs api response error 401`)
     console.log(response)
+
     if (response.ok === true) {
       const fetchData = await response.json()
-      const updatedData = fetchData.map(eachData => ({
+      const {jobs} = fetchData
+
+      const updatedData = jobs.map(eachData => ({
         companyLogoUrl: eachData.company_logo_url,
         employmentType: eachData.employment_type,
         id: eachData.id,
@@ -55,6 +64,7 @@ class Jobs extends Component {
         rating: eachData.rating,
         title: eachData.title,
       }))
+
       console.log(updatedData)
       this.setState({jobsList: updatedData})
     }
@@ -72,8 +82,18 @@ class Jobs extends Component {
     }
 
     const profileResponse = await fetch(profileUrl, options)
+
+    // In console profileResponse status is showing 401. Here data is failed fetch
+    // How can i solve this error
+    // Start the app and check this error in console
+
+    // I used the dummy data provided in description to design layout of the website. Not used data the fetched from api's
+
+    console.log(`profile api response error 401`)
+    console.log(profileResponse)
+
     if (profileResponse.ok === true) {
-      const data = profileResponse.json()
+      const data = await profileResponse.json()
       const updatedData = {
         profileDetails: {
           name: data.profile_details.name,
